@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="instruction.png" translatesAutoresizingMaskIntoConstraints="NO" id="aOP-Rw-ACa">
+                                <rect key="frame" x="243" y="251" width="114" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="getReady.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xbq-FC-koX">
+                                <rect key="frame" x="203" y="271" width="195" height="59"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGP-qB-3h7">
+                                <rect key="frame" x="-200" y="0.0" width="255" height="600"/>
+                                <subviews>
+                                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-dz-3NQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-06-ct2">
+                                                <rect key="frame" x="70" y="14" width="59" height="27"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="I9g-06-ct2" firstAttribute="centerX" secondItem="Axg-dz-3NQ" secondAttribute="centerX" id="Gda-mm-HRx"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVK-lM-RfN">
+                                        <rect key="frame" x="210" y="10" width="35" height="35"/>
+                                        <color key="tintColor" red="0.98823529409999999" green="0.72156862749999995" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="ic_hamburger"/>
+                                        <connections>
+                                            <action selector="menuButtonAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="V2N-rF-Ka2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lVK-lM-RfN" firstAttribute="centerY" secondItem="I9g-06-ct2" secondAttribute="centerY" id="1LG-1R-Yfu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Axg-dz-3NQ" secondAttribute="bottom" id="BlT-AV-c1v"/>
+                                    <constraint firstAttribute="width" constant="255" id="Fwu-2Z-pOM"/>
+                                    <constraint firstItem="lVK-lM-RfN" firstAttribute="top" secondItem="aGP-qB-3h7" secondAttribute="top" constant="10" id="MMM-e1-FUv"/>
+                                    <constraint firstItem="Axg-dz-3NQ" firstAttribute="top" secondItem="aGP-qB-3h7" secondAttribute="top" id="Puo-kf-wif"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVK-lM-RfN" secondAttribute="trailing" constant="10" id="dnM-h5-9ur"/>
+                                    <constraint firstAttribute="trailing" secondItem="Axg-dz-3NQ" secondAttribute="trailing" constant="55" id="gYu-2P-Y73"/>
+                                    <constraint firstItem="Axg-dz-3NQ" firstAttribute="leading" secondItem="aGP-qB-3h7" secondAttribute="leading" id="l4E-8j-n3n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xbq-FC-koX" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="3sF-gh-sit"/>
+                            <constraint firstItem="Xbq-FC-koX" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="CCi-Ia-bz7"/>
+                            <constraint firstItem="aGP-qB-3h7" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="-200" id="Czv-Nn-Q22"/>
+                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="aGP-qB-3h7" secondAttribute="bottom" id="U6p-Jc-gML"/>
+                            <constraint firstItem="aOP-Rw-ACa" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="c9R-GF-xlg"/>
+                            <constraint firstItem="aGP-qB-3h7" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" id="lX4-mg-FLc"/>
+                            <constraint firstItem="aOP-Rw-ACa" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="ldI-qI-GDW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="constraintMenuContainerRight" destination="gYu-2P-Y73" id="wPz-Yp-BpZ"/>
+                        <outlet property="constraintMenuOffset" destination="Czv-Nn-Q22" id="bke-M5-dkW"/>
+                        <outlet property="constraintMenuWidth" destination="Fwu-2Z-pOM" id="H5O-vT-Ezc"/>
+                        <outlet property="getReadyImage" destination="Xbq-FC-koX" id="8iX-g2-Xf6"/>
+                        <outlet property="instructionImage" destination="aOP-Rw-ACa" id="uYU-Wp-frg"/>
+                        <outlet property="menuButton" destination="lVK-lM-RfN" id="c2M-pZ-sn5"/>
+                        <outlet property="menuContainerview" destination="Axg-dz-3NQ" id="U82-cX-BEv"/>
+                        <outlet property="menuFrameView" destination="aGP-qB-3h7" id="cMD-v5-gz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="getReady.png" width="195" height="59"/>
+        <image name="ic_hamburger" width="35" height="35"/>
+        <image name="instruction.png" width="114" height="98"/>
+    </resources>
+</document>

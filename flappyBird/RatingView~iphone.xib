@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.90000000000000002" contentMode="scaleToFill" id="iN0-l3-epB" customClass="RatingView">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="401"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cL-ef-5WN">
+                    <rect key="frame" x="8" y="8" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="G31-zd-GeB"/>
+                        <constraint firstAttribute="height" constant="40" id="yzP-CV-SJG"/>
+                    </constraints>
+                    <state key="normal" image="ic_close"/>
+                    <state key="highlighted" image="ic_close_tap"/>
+                    <connections>
+                        <action selector="closeButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="twM-yH-qiB"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameOver.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-H4-AwI">
+                    <rect key="frame" x="66" y="5" width="202" height="53"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-d5-oZM">
+                    <rect key="frame" x="54" y="144" width="226" height="114"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score.png" translatesAutoresizingMaskIntoConstraints="NO" id="yD6-41-zw1">
+                            <rect key="frame" x="0.0" y="0.0" width="226" height="114"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="platinum.png" translatesAutoresizingMaskIntoConstraints="NO" id="S2k-8A-yLF">
+                            <rect key="frame" x="26" y="42" width="44" height="44"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moh-AM-WPh">
+                            <rect key="frame" x="184" y="33" width="19" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-ud-Jvt">
+                            <rect key="frame" x="184" y="76" width="19" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="QVj-ud-Jvt" firstAttribute="centerX" secondItem="moh-AM-WPh" secondAttribute="centerX" id="1dq-TL-QK7"/>
+                        <constraint firstItem="QVj-ud-Jvt" firstAttribute="top" secondItem="moh-AM-WPh" secondAttribute="bottom" constant="22" id="2s6-7S-iOp"/>
+                        <constraint firstItem="yD6-41-zw1" firstAttribute="top" secondItem="HCE-d5-oZM" secondAttribute="top" id="Bmh-3E-b2c"/>
+                        <constraint firstAttribute="trailing" secondItem="yD6-41-zw1" secondAttribute="trailing" id="LuF-JH-bZ2"/>
+                        <constraint firstItem="yD6-41-zw1" firstAttribute="leading" secondItem="HCE-d5-oZM" secondAttribute="leading" id="St1-OF-Bdr"/>
+                        <constraint firstItem="S2k-8A-yLF" firstAttribute="top" secondItem="HCE-d5-oZM" secondAttribute="top" constant="42" id="Xpd-go-ugg"/>
+                        <constraint firstAttribute="trailing" secondItem="moh-AM-WPh" secondAttribute="trailing" constant="23" id="epd-q3-NFX"/>
+                        <constraint firstItem="moh-AM-WPh" firstAttribute="top" secondItem="HCE-d5-oZM" secondAttribute="top" constant="33" id="gJd-LJ-O1q"/>
+                        <constraint firstItem="S2k-8A-yLF" firstAttribute="leading" secondItem="HCE-d5-oZM" secondAttribute="leading" constant="26" id="mGr-jX-qRv"/>
+                        <constraint firstAttribute="bottom" secondItem="yD6-41-zw1" secondAttribute="bottom" id="xUP-vY-94i"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter nick or name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rao-eg-pMq">
+                    <rect key="frame" x="54" y="299" width="226" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <action selector="textFieldValueChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="Eeb-ng-iPT"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="VQg-nc-lOb"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-XR-N52">
+                    <rect key="frame" x="143" y="268" width="49" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4D-3y-E8M">
+                    <rect key="frame" x="243" y="339" width="37" height="30"/>
+                    <state key="normal" title="SAVE"/>
+                    <connections>
+                        <action selector="saveAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="sdd-Kz-Fu9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.9882352941176471" green="0.72156862745098038" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="R7o-XR-N52" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5VO-el-vEO"/>
+                <constraint firstItem="HCE-d5-oZM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6TN-tg-4J6"/>
+                <constraint firstItem="HCE-d5-oZM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8YW-eD-BJ6"/>
+                <constraint firstItem="t4D-3y-E8M" firstAttribute="top" secondItem="rao-eg-pMq" secondAttribute="bottom" constant="10" id="DLh-W0-1aP"/>
+                <constraint firstItem="R7o-XR-N52" firstAttribute="top" secondItem="HCE-d5-oZM" secondAttribute="bottom" constant="10" id="FBU-35-DT7"/>
+                <constraint firstItem="Rf1-H4-AwI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FoT-n7-jMm"/>
+                <constraint firstItem="rao-eg-pMq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YES-Ck-Ywo"/>
+                <constraint firstItem="rao-eg-pMq" firstAttribute="width" secondItem="HCE-d5-oZM" secondAttribute="width" id="b46-tj-0cQ"/>
+                <constraint firstItem="Rf1-H4-AwI" firstAttribute="centerY" secondItem="6cL-ef-5WN" secondAttribute="centerY" constant="3" id="g4s-FR-nAV"/>
+                <constraint firstItem="6cL-ef-5WN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="iF7-GB-iwp"/>
+                <constraint firstItem="rao-eg-pMq" firstAttribute="top" secondItem="HCE-d5-oZM" secondAttribute="bottom" constant="41" id="vXG-Bb-d2d"/>
+                <constraint firstItem="t4D-3y-E8M" firstAttribute="trailing" secondItem="rao-eg-pMq" secondAttribute="trailing" id="yVM-uj-jif"/>
+                <constraint firstItem="6cL-ef-5WN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="yZ2-vP-FdK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bestLabel" destination="QVj-ud-Jvt" id="70d-Ic-zva"/>
+                <outlet property="medalImage" destination="S2k-8A-yLF" id="gTm-n1-to2"/>
+                <outlet property="nameTextField" destination="rao-eg-pMq" id="BVe-XL-G4Z"/>
+                <outlet property="saveButton" destination="t4D-3y-E8M" id="9Pr-qt-pwe"/>
+                <outlet property="saveLabel" destination="R7o-XR-N52" id="dIm-Qb-CD2"/>
+                <outlet property="scoreLabel" destination="moh-AM-WPh" id="brY-Lg-8Qz"/>
+            </connections>
+            <point key="canvasLocation" x="243" y="335.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gameOver.png" width="202" height="53"/>
+        <image name="ic_close" width="20" height="20"/>
+        <image name="ic_close_tap" width="20" height="20"/>
+        <image name="platinum.png" width="44" height="44"/>
+        <image name="score.png" width="226" height="114"/>
+    </resources>
+</document>
